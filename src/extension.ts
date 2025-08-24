@@ -7,14 +7,14 @@ import * as path from 'path';
 // Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
 	// Tab: Copy file name
-	context.subscriptions.push(vscode.commands.registerCommand('copy-path-tools.copyFileNameTab', (uri: vscode.Uri) => {
+	context.subscriptions.push(vscode.commands.registerCommand('vscext-copy-path.copyFileNameTab', (uri: vscode.Uri) => {
 		if (uri) {
 			vscode.env.clipboard.writeText(path.basename(uri.fsPath));
 		}
 	}));
 
 	// Tab: Copy file name without extension
-	context.subscriptions.push(vscode.commands.registerCommand('copy-path-tools.copyFileNameNoExtTab', (uri: vscode.Uri) => {
+	context.subscriptions.push(vscode.commands.registerCommand('vscext-copy-path.copyFileNameNoExtTab', (uri: vscode.Uri) => {
 		if (uri) {
 			const base = path.basename(uri.fsPath, path.extname(uri.fsPath));
 			vscode.env.clipboard.writeText(base);
@@ -22,7 +22,7 @@ export function activate(context: vscode.ExtensionContext) {
 	}));
 
 	// Editor: Copy file name with line number
-	context.subscriptions.push(vscode.commands.registerCommand('copy-path-tools.copyFileNameLineEditor', () => {
+	context.subscriptions.push(vscode.commands.registerCommand('vscext-copy-path.copyFileNameLineEditor', () => {
 		const editor = vscode.window.activeTextEditor;
 		if (editor) {
 			const fileName = path.basename(editor.document.fileName);
@@ -32,7 +32,7 @@ export function activate(context: vscode.ExtensionContext) {
 	}));
 
 	// Editor: Copy relative path with line number
-	context.subscriptions.push(vscode.commands.registerCommand('copy-path-tools.copyRelativePathLineEditor', () => {
+	context.subscriptions.push(vscode.commands.registerCommand('vscext-copy-path.copyRelativePathLineEditor', () => {
 		const editor = vscode.window.activeTextEditor;
 		const wsFolder = vscode.workspace.getWorkspaceFolder(editor?.document.uri!);
 		if (editor && wsFolder) {
@@ -43,7 +43,7 @@ export function activate(context: vscode.ExtensionContext) {
 	}));
 
 	// Editor: Copy full path with line number
-	context.subscriptions.push(vscode.commands.registerCommand('copy-path-tools.copyFullPathLineEditor', () => {
+	context.subscriptions.push(vscode.commands.registerCommand('vscext-copy-path.copyFullPathLineEditor', () => {
 		const editor = vscode.window.activeTextEditor;
 		if (editor) {
 			const fullPath = editor.document.fileName;
