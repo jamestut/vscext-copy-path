@@ -1,7 +1,7 @@
 {
   "name": "copy-path-tools",
-  "displayName": "Copy Path Tools",
-  "description": "Copy file name, path, and line info from tabs and editor context menus.",
+  "displayName": "Path Copier",
+  "description": "Copy file name, path, and line info.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.100.0"
