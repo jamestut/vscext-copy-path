@@ -1,8 +1,13 @@
 {
   "name": "vscext-copy-path",
   "displayName": "Path Copier",
+  "publisher": "jamestut",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jamestut/vscext-copy-path"
+  },
   "description": "Copy file name, path, and line info.",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.100.0"
   },
@@ -106,7 +111,7 @@
     "lint": "eslint src"
   },
   "devDependencies": {
-    "@types/vscode": "^1.103.0",
+    "@types/vscode": "^1.100.0",
     "@types/node": "22.x",
     "@typescript-eslint/eslint-plugin": "^8.39.0",
     "@typescript-eslint/parser": "^8.39.0",
