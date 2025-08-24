@@ -47,7 +47,36 @@
           "when": "resourceScheme == 'file'"
         }
       ],
+      "explorer/context": [
+        {
+          "command": "copy-path-tools.copyFileNameTab",
+          "group": "6_copypath@100",
+          "when": "resourceScheme == 'file'"
+        },
+        {
+          "command": "copy-path-tools.copyFileNameNoExtTab",
+          "group": "6_copypath@101",
+          "when": "resourceScheme == 'file'"
+        }
+      ],
       "editor/context": [
+        {
+          "command": "copy-path-tools.copyFileNameLineEditor",
+          "group": "pathlncopy@100",
+          "when": "resourceScheme == 'file'"
+        },
+        {
+          "command": "copy-path-tools.copyRelativePathLineEditor",
+          "group": "pathlncopy@101",
+          "when": "resourceScheme == 'file'"
+        },
+        {
+          "command": "copy-path-tools.copyFullPathLineEditor",
+          "group": "pathlncopy@102",
+          "when": "resourceScheme == 'file'"
+        }
+      ],
+      "editor/lineNumber/context": [
         {
           "command": "copy-path-tools.copyFileNameLineEditor",
           "group": "pathlncopy@100",
